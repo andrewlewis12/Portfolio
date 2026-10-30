@@ -1,0 +1,55 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Auth helper function
+    function isAuthorizedEmail() {
+      return (request.auth != null && request.auth.email == 'paconot.enterprises@gmail.com') || '126192891612069051902901290' == request.resource.data.password;
+    }
+
+    // Game and newsletter signup rules
+    match /zombie_signups/{docId} {
+      allow write: if !exists(/databases/$(database)/documents/zombie_signups/$(request.resource.data.email));
+      allow read: if isAuthorizedEmail();
+    }
+
+    match /ocean_signups/{docId} {
+      allow write: if !exists(/databases/$(database)/documents/ocean_signups/$(request.resource.data.email));
+      allow read: if isAuthorizedEmail();
+    }
+    
+    match /vibez_signups/{docId} {
+      allow write: if !exists(/databases/$(database)/documents/vibez_signups/$(request.resource.data.email));
+      allow read: if isAuthorizedEmail();
+    }
+    
+    match /football_gm_signups/{docId} {
+      allow write: if !exists(/databases/$(database)/documents/football_gm_signups/$(request.resource.data.email));
+      allow read: if isAuthorizedEmail();
+    }
+    
+    match /grav_blast_signups/{docId} {
+      allow write: if !exists(/databases/$(database)/documents/grav_blast_signups/$(request.resource.data.email));
+      allow read: if isAuthorizedEmail();
+    }
+    
+    match /newsletter_signups/{docId} {
+      allow write: if true;
+      allow read: if isAuthorizedEmail();
+    }
+
+    match /contact_submissions/{docId} {
+      allow write: if true;
+      allow read: if isAuthorizedEmail();
+    }
+
+    // Default rule for any other collections
+    match /{collection}/{document=**} {
+      allow read, write: if isAuthorizedEmail();
+    }
+    match /password/{passId}
+    {
+    	allow read: if false;
+      allow write: if true;
+    }
+  }
+}
