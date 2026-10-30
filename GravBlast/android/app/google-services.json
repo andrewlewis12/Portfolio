@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "971483244394",
+    "project_id": "paconot-enterprises-website",
+    "storage_bucket": "paconot-enterprises-website.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971483244394:android:2723b90a89d77305dce713",
+        "android_client_info": {
+          "package_name": "com.paconotgames.grav_blast"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971483244394-pdcjc93sc4c8ncvlbelba21fc43u0tc9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ6OLcxaTrZcoKua0X7YVyGkVkRKfd498"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971483244394-pdcjc93sc4c8ncvlbelba21fc43u0tc9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "971483244394-irimtm4d1s428dd1uu8bbkssu8dqftbl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.morphRunner"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971483244394:android:da372228271c3eb0dce713",
+        "android_client_info": {
+          "package_name": "com.paconotgames.morph_runner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971483244394-pdcjc93sc4c8ncvlbelba21fc43u0tc9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ6OLcxaTrZcoKua0X7YVyGkVkRKfd498"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971483244394-pdcjc93sc4c8ncvlbelba21fc43u0tc9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "971483244394-irimtm4d1s428dd1uu8bbkssu8dqftbl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.morphRunner"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
